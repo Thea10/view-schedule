@@ -1,0 +1,344 @@
+:root {
+  --fontFamily: "PT Serif", serif;
+  --actionBtnRadius: 0 6px 6px 0;
+  --acionTabRadius: 6px;
+  --actionBtnColor: #fff;
+  --actionTabColor: #1b1b1b;
+  --bodyBg: #f9fffb;
+  --footerBg: rgba(244, 244, 244, 0.75);
+  --footerText: #303030;
+  --getStartedText: #383838;
+  --headText: #121212;
+  --orange: #ffbe56;
+  --orangeLight: #f9f5e1;
+  --orangeBg: #ff9d00;
+  --orangeBorder: #fe9b00;
+  --orangeText: #e78f00;
+  --deepOrange: #ff682a;
+  --deepOrangeBg: rgba(255, 146, 101, 0.7);
+  --green: #00c267;
+  --lightGreen: rgb(207, 236, 255, 0.5);
+  --purple: #cfecff;
+  --purpleBg: rgba(190, 164, 255, 0.7);
+  --purpleText: #8a5cff;
+  --time-text: #333;
+}
+
+@font-face {
+  font-family: "Cerebri Sans Regular";
+  src: url("../fonts/Cerebri/CerebriSansPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Cerebri Sans Light";
+  src: url("../fonts/Cerebri/CerebriSansPro-Light.otf") format("opentype");
+}
+
+body {
+  background-color: var(--bodyBg);
+  font-family: var(--fontFamily);
+  margin: 0;
+  padding: 4px 8px;
+  scroll-behavior: smooth;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.other-font {
+  font-family: "Cerebri Sans Regular", sans-serif;
+}
+
+.other-font-light {
+  font-family: "Cerebri Sans Light", sans-serif;
+}
+
+.strike-text {
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
+.ml-2 {
+  margin-left: 5px;
+}
+
+button {
+  outline: 0;
+  border: 0;
+}
+
+.main-content {
+  max-width: 320px;
+  margin: auto;
+}
+
+.profile,
+.head-action,
+.schedule-tab,
+.schedule-detail {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+}
+
+.profile-text,
+.head-text,
+.start-text,
+.schedule-detail {
+  color: var(--headText);
+}
+
+.profile-text {
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 22px;
+  margin-left: 20px;
+}
+
+.head-action {
+  justify-content: space-between;
+}
+.head-text {
+  font-size: 28px;
+  line-height: 37px;
+}
+
+.reconfigure {
+  background-color: rgb(255, 157, 0, 0.05);
+  border: 1px solid var(--orangeBorder);
+  border-radius: 13px;
+  color: var(--orangeText);
+  font-size: 12px;
+  line-height: 15px;
+  height: 25px;
+  width: 140px;
+}
+
+.action-tabs {
+  border-radius: var(--acionTabRadius);
+  display: flex;
+  color: var(--actionTabColor);
+  font-size: 14px;
+  flex-direction: row;
+  line-height: 23px;
+  margin: 1rem auto;
+  width: 319px;
+}
+
+.tab {
+  width: 204px;
+  padding: 0 16px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.action-tab-buttons {
+  border-radius: var(--actionBtnRadius);
+  color: var(--actionBtnColor);
+  width: 115px;
+  height: 64px;
+}
+
+.action-tab-buttons span {
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.tab-green {
+  background-color: rgba(0, 194, 103, 0.1);
+}
+
+.tab-green-button {
+  background-color: var(--green);
+  padding: 8px;
+}
+
+.tab-orange {
+  background-color: var(--orangeLight);
+}
+
+.tab-orange-button {
+  background-color: var(--orange);
+  padding: 8px;
+}
+
+.get-started {
+  background-color: var(--lightGreen);
+  border-radius: var(--acionTabRadius);
+  color: var(--getStartedText);
+  font-size: 14px;
+  font-weight: 300;
+  height: 252px;
+  line-height: 20px;
+  margin: 1.5rem auto;
+  padding: 8px 16px;
+}
+
+.start-text {
+  font-size: 17px;
+  line-height: 20px;
+  margin: 10px 0;
+}
+
+.start-actions {
+  display: flex;
+  flex-direction: row;
+  font-family: "Cerebri Sans", sans-serif;
+  justify-content: center;
+  margin: 1.5rem auto 0;
+}
+
+.start-action {
+  display: inherit;
+  flex-direction: column;
+  padding: 4px 8px;
+  text-align: left;
+  width: 109px;
+}
+
+.start-action > * {
+  margin-bottom: 1rem;
+}
+
+.start-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.purple-button {
+  background-color: var(--purpleBg);
+}
+
+.purple-text {
+  color: var(--purpleText);
+}
+
+.orange-button {
+  background-color: var(--deepOrangeBg);
+}
+
+.orange-text {
+  color: var(--deepOrange);
+}
+
+.scheduled-day {
+  color: var(--green);
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 22px;
+  margin: 0.5rem 0;
+}
+
+.schedule-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-tab {
+  height: 64px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.schedule-text {
+  color: var(--time-text);
+  font-size: 12px;
+  line-height: 15px;
+  padding: 4px 8px;
+}
+
+.schedule-detail {
+  background-color: var(--lightGreen);
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 19px;
+  padding: 13px;
+  width: 230px;
+}
+
+.footer {
+  background-color: var(--footerBg);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer-item {
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 15px 25px;
+}
+
+.footer-item-img {
+  width: 21px;
+  height: 21px;
+  margin-bottom: 10px;
+}
+.footer-item-text {
+  color: var(--footerText);
+  font-family: "Cerebri Sans Light", sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 22px;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  background: var(--orange);
+  box-shadow: 0 0 1px var(--orangeLight);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset var(--orangeLight);
+  box-shadow: inset var(--orangeLight);
+  border-radius: 10px;
+}
+
+@media (min-width: 576px) {
+  .schedule-tabs {
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    max-width: 700px;
+  }
+  .account-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .action-tabs {
+    margin: 1rem;
+  }
+
+  .get-started {
+    text-align: center;
+  }
+}
