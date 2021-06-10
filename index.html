@@ -4,30 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Your Schedule</title>
   </head>
   <body>
     <div class="main-content">
       <div class="profile">
-        <img src="./images/profile.png" alt="silm" class="profile-image">
+        <img src="./images/profile.png" alt="silm" class="profile-image" />
         <h4 class="profile-text">Good Morning Silm!</h4>
       </div>
-       
+
       <div class="head-action">
         <h1 class="font-bold">Schedule</h1>
 
         <button class="reconfigure other-font">Reconfigure Services</button>
       </div>
-      
-      <section class="account-actions">
 
+      <section class="account-actions">
         <div class="action-tabs other-font">
           <div class="tab tab-green other-font-light">
             <span> Your account is inactive.</span>
-            <span>   <span class="font-bold">15% off </span>offer until June 23.</span>
+            <span>
+              <span class="font-bold">15% off </span>offer until June 23.</span
+            >
           </div>
           <button class="action-tab-buttons tab-green-button other-font">
             <span class="strike-text">N75,000</span>
@@ -35,19 +39,40 @@
             <span>Pay N62,800</span>
           </button>
         </div>
-        <div class="action-tabs">
-          <div class="tab tab-orange other-font-light">
-            <span> View your meals for the week.</span>
+        <div class="action-tabs meal-modal" id="meal-modal">
+          <div  id="hide-info-tab" class="action-tab-header">
+            <div class="tab tab-orange other-font-light">
+              <span> View your meals for the week.</span>
+            </div>
+
+            <button
+              id="show-modal-btn"
+              class="action-tab-buttons tab-orange-button other-font"
+            >
+              <span>Check ‘em</span>
+            </button>
           </div>
-          <button class="action-tab-buttons tab-orange-button other-font">
-            <span>Check ‘em</span>
-          </button>
+
+          <div>
+            <div class="meal-list">
+              <div class="meal-list-header">
+                <h4>Today's Meals</h4>
+                <button id="hide-modal-btn">
+                  <img src="./images/meals/close.png" alt="close" />
+                </button>
+              </div>
+
+              <ul class="meal-list-body" id="list-body"></ul>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="get-started">
         <h3 class="start-text font-bold">Getting Started</h3>
-        <span class="other-font-light">Let’s answer any questions you have left!</span>
+        <span class="other-font-light"
+          >Let’s answer any questions you have left!</span
+        >
 
         <div class="start-actions">
           <div class="start-action">

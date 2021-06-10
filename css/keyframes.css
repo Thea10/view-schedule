@@ -1,0 +1,95 @@
+@keyframes showModal {
+  0% {
+    background-color: transparent;
+    height: 64px;
+    top: 35%;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    width: 90%;
+  }
+
+  50% {
+    background-color: var(--lightmodalBg);
+    opacity: 1;
+    width: 100%;
+  }
+
+  100% {
+    background-color: var(--modalBg);
+    height: 100vh;
+  }
+}
+
+@keyframes hideModal {
+  0% {
+    background-color: var(--lightmodalBg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    position: unset;
+    width: 100%;
+    z-index: 44;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+  100% {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@keyframes hideParent {
+  0% {
+    opacity: 0.5;
+    top: 0;
+    z-index: 44;
+  }
+  50% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+
+@keyframes unhideParent {
+  0% {
+    position: absolute;
+    top: 14%;
+    left: 0;
+    right: 0;
+    z-index: 44;
+    width: 90%;
+    opacity: 0;
+  }
+
+  50% {
+    top: 35%;
+    opacity: 0.5;
+    width: 319px;
+    margin: 1rem auto;
+  }
+
+  
+}
+
+@keyframes hideList {
+  0% {
+    opacity: 1;
+    height: 567px;
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  50% {
+    top: 35%;
+    height: 0;
+    width: 319px;
+    margin: 1rem auto;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

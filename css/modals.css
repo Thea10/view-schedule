@@ -1,0 +1,121 @@
+.meal-modal,
+.meal-modal.show,
+#hide-info-tab,
+#hide-info-tab.hide {
+  transition: all 0.6s ease-in-out;
+}
+.meal-modal.show,
+#hide-info-tab.hide,
+.meal-list {
+  position: absolute;
+}
+
+.meal-modal .meal-list {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(30px);
+}
+
+.meal-modal.show {
+  z-index: 44;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  animation: showModal 1s;
+  left: 0;
+  right: 0;
+  background-color: var(--modalBg);
+  margin: 0 auto;
+  border-radius: 0;
+}
+
+.meal-modal.show .meal-list {
+  height: 100%;
+  opacity: 1;
+}
+
+.meal-modal.hidden {
+  animation: hideModal 1.5s;
+}
+.meal-modal.hidden .meal-list {
+   animation: hideList 1.5s;
+}
+
+#hide-info-tab {
+  animation: unhideParent 1.5s;
+}
+
+#hide-info-tab.hide {
+  animation: hideParent 1s;
+  opacity: 0;
+  top: 14%;
+  width: 100%;
+}
+
+.meal-list {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 14%;
+}
+.meal-list-header {
+  background-color: var(--orangeLight);
+  border-radius: 20px 20px 0 0;
+  height: 87px;
+  justify-content: space-between;
+}
+.meal-list-header h4 {
+  color: var(--headText);
+  font-size: 20px;
+  line-height: 26px;
+  margin-left: 2rem;
+}
+
+.meal-list-header button {
+  background-color: var(--orange);
+  border-radius: 0 20px 0 0;
+  height: 100%;
+  width: 115px;
+  padding: 16px;
+}
+.meal-list-body {
+  background-color: var(--actionBtnColor);
+  margin: 0;
+  padding: 16px;
+}
+
+.meal-item {
+  margin: 0.2rem 0 1.5rem 0.8rem;
+}
+
+.meal-item .desc-img {
+  border-radius: 15px;
+  height: 60px;
+  width: 60px;
+  word-break: break-all;
+}
+
+.meal-item .meal-desc {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+}
+.meal-desc h5,
+.meal-desc h6 {
+  font-family: "Cerebri Sans Light", sans-serif;
+  font-weight: 300;
+  line-height: 24px;
+  margin-top: 0;
+}
+.meal-desc h5 {
+  font-size: 18px;
+  color: var(--footerText);
+  margin-bottom: 0.2rem;
+}
+
+.meal-desc h6 {
+  color: var(--foodDesc);
+  font-size: 15px;
+  margin-bottom: 0;
+}
