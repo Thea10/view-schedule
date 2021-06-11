@@ -92,12 +92,11 @@
 
 @keyframes showLargeImg {
   0% {
-    flex: 0 0 60px;
     width: 60px;
-    left: 7%;
     top: unset;
     bottom: unset;
     height: 60px;
+    left: 10%;
   }
   50% {
     width: 100vw;

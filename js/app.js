@@ -111,7 +111,10 @@ function hideMealModal() {
   let mealModal = getElementId("meal-modal");
   mealModal.classList.add("hidden");
   mealModal.classList.remove("show");
-  getElementId("main-overlay").classList.remove("show")
+  setTimeout(() => {
+    getElementId("main-overlay").classList.remove("show")
+
+  }, 200);
   getElementId("hide-info-tab").classList.remove("hide");
 }
 
