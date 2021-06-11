@@ -108,13 +108,12 @@ function toggleMealModal(type) {
     mealModal.classList.add("show");
     info_tab.classList.add("hide");
   } else {
+    overlay.classList.remove("show");
+
     mealModal.classList.add("hidden");
     mealModal.classList.remove("show");
 
-    setTimeout(() => {
-      overlay.classList.remove("show");
-    }, 200);
-    info_tab.classList.remove("hide");
+     info_tab.classList.remove("hide");
   }
 }
 

@@ -41,9 +41,9 @@
 
 @keyframes hideParent {
   0% {
-    opacity: 0.5;
-    top: 0;
+    opacity: 0.3;
     z-index: 44;
+    width: 319px;
   }
   50% {
     opacity: 0;
@@ -59,13 +59,11 @@
     right: 0;
     z-index: 44;
     width: 90%;
-    opacity: 0;
-  }
+   }
 
   50% {
     top: 35%;
-    opacity: 0.5;
-    width: 319px;
+     width: 319px;
     margin: 1rem auto;
   }
 }
@@ -83,11 +81,10 @@
     height: 0;
     width: 319px;
     margin: 1rem auto;
-  }
-
-  100% {
     opacity: 0;
-  }
+   }
+
+  
 }
 
 @keyframes showLargeImg {
