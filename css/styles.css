@@ -46,7 +46,7 @@ body {
   margin: 0;
   padding: 4px 8px;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .font-bold {
