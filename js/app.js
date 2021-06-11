@@ -62,9 +62,7 @@ function setMealList() {
     let listItemElements = ` 
     <button  class="desc-img">   <img src=${element.img} alt=${element.title} /></button>
     <div style="background-image:url(${element.imgLarge})" class="large-img">    </div>
-  
-    <div class="overlay"></div>
-
+    <div class="overlay child"></div>
     <div class="meal-desc">
      <h5> ${element.title} </h5>
      <h6> ${element.description} </h6>
@@ -81,41 +79,49 @@ function setMealList() {
         elementToShow.nextElementSibling.classList.add("show");
       })
     );
-    document.querySelectorAll(".large-img").forEach((el) =>
-      el.addEventListener("click", function showNext() {
-        this.classList.add("hide");
-        this.classList.remove("show");
-        this.nextElementSibling.classList.remove("show");
-      })
-    );
+    document.querySelectorAll(".large-img").forEach((el) => {
+      el.addEventListener("click", function () {
+        hideLargeImage(el);
+      });
+      el.nextElementSibling.addEventListener("click", function () {
+        hideLargeImage(el);
+      });
+    });
   });
 }
 
 getElementId("show-modal-btn").addEventListener("click", function show() {
-  openMealModal();
+  toggleMealModal("open");
 });
 
 getElementId("hide-modal-btn").addEventListener("click", function hide() {
-  hideMealModal();
+  toggleMealModal("close");
 });
 
-function openMealModal() {
+function toggleMealModal(type) {
   let mealModal = getElementId("meal-modal");
-  getElementId("main-overlay").classList.add("show")
-  mealModal.classList.remove("hidden");
-  mealModal.classList.add("show");
-  getElementId("hide-info-tab").classList.add("hide");
+  let overlay = getElementId("main-overlay");
+  let info_tab = getElementId("hide-info-tab");
+  if (type === "open") {
+    overlay.classList.add("show");
+    mealModal.classList.remove("hidden");
+    mealModal.classList.add("show");
+    info_tab.classList.add("hide");
+  } else {
+    mealModal.classList.add("hidden");
+    mealModal.classList.remove("show");
+
+    setTimeout(() => {
+      overlay.classList.remove("show");
+    }, 200);
+    info_tab.classList.remove("hide");
+  }
 }
 
-function hideMealModal() {
-  let mealModal = getElementId("meal-modal");
-  mealModal.classList.add("hidden");
-  mealModal.classList.remove("show");
-  setTimeout(() => {
-    getElementId("main-overlay").classList.remove("show")
-
-  }, 200);
-  getElementId("hide-info-tab").classList.remove("hide");
+function hideLargeImage(el) {
+  el.classList.add("hide");
+  el.classList.remove("show");
+  el.nextElementSibling.classList.remove("show");
 }
 
 setMealList();
