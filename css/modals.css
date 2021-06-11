@@ -25,7 +25,6 @@
   animation: showModal 1s;
   left: 0;
   right: 0;
-  background-color: var(--modalBg);
   margin: 0 auto;
   border-radius: 0;
 }
@@ -39,7 +38,7 @@
   animation: hideModal 1.5s;
 }
 .meal-modal.hidden .meal-list {
-   animation: hideList 1.5s;
+  animation: hideList 1.5s;
 }
 
 #hide-info-tab {
@@ -87,6 +86,55 @@
 
 .meal-item {
   margin: 0.2rem 0 1.5rem 0.8rem;
+}
+
+.meal-item .large-img {
+  height: 0;
+  opacity: 0;
+  left: 10%;
+  overflow: hidden;
+  position: absolute;
+  margin-top: -55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.meal-item .large-img.show {
+  left: 0;
+  opacity: 1;
+  height: 100vh;
+  margin: auto;
+  animation: showLargeImg 1.5s;
+  z-index: 1030;
+  width: 100vw;
+  top: 25px;
+  bottom: 25px;
+}
+
+.meal-item .large-img.hide {
+  animation: hideLargeImg 1.5s;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  left: 0;
+  right: 0;
+  transition: all 0.6s ease-in-out;
+ }
+.overlay.show {
+  background-color: var(--modalBg);
+  opacity: 1;
+  height: 100vh;
+  transition: all 0.6s ease-in-out;
 }
 
 .meal-item .desc-img {
